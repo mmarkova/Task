@@ -1,0 +1,11 @@
+CREATE TABLE Options(
+	Id INT NOT NULL,
+	Name NVARCHAR(50) NOT NULL,
+	Value INT NOT NULL,
+	PRIMARY KEY(Id)
+);
+
+INSERT INTO Options(Name, Value)
+VALUES ('one',1), ('two',2), ('three', 3), ('four', 4)
+
+select * from Options where Id % 3 = 0

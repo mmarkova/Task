@@ -1,0 +1,62 @@
+﻿@model Task_Markova.Models.Person
+@using (Ajax.BeginForm("ListPersons", "Home", new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "personsTable", OnComplete = "ClearInputField" }, new { id = "personRegistration" }))
+{
+    @Html.AntiForgeryToken()
+    <div>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div>
+            @Html.LabelFor(model => model.Name)
+
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+        <div>
+            @Html.LabelFor(model => model.Surname)
+
+            @Html.EditorFor(model => model.Surname)
+            @Html.ValidationMessageFor(model => model.Surname)
+        </div>
+        <div>
+            @Html.LabelFor(model => model.Age)
+
+            @Html.EditorFor(model => model.Age)
+            @Html.ValidationMessageFor(model => model.Age)
+        </div>
+        <div>
+            @Html.LabelFor(model => model.Profession)
+
+            @Html.EditorFor(model => model.Profession)
+            @Html.ValidationMessageFor(model => model.Profession)
+        </div>
+        <hr />
+        <div id="asp">
+            <div>
+                <div>
+                    <input type="submit" value="Add (.net)" />
+                </div>
+            </div>
+            <div id="personsTable"></div>
+        </div>
+        <div id="js">
+            <div>
+                <div>
+                    <input id="btnJs" type="button" value="Add (js)" />
+                </div>
+            </div>
+            <div id="personsjsTable">
+                <table>
+                    <tbody id="body_table_js"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+}
+<script type="text/javascript">
+    function ClearInputField() {
+        document.getElementById('Name').value = "";
+        document.getElementById('Surname').value = "";
+        document.getElementById('Age').value = "";
+        document.getElementById('Profession').value = "";
+    }
+</script>

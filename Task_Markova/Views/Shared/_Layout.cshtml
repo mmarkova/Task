@@ -1,0 +1,24 @@
+﻿
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>test task</title>
+	<meta name="description" content="Test task from Markova"/>
+	<meta name="keywords" content="test, task, Markova"> 
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</meta>
+<body>
+
+    @RenderBody()
+    <hr />
+    <footer>
+        <p>&copy; @DateTime.Now.Year</p>
+    </footer>
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+

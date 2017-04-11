@@ -1,0 +1,13 @@
+﻿
+@using (Ajax.BeginForm("textToHtml", "Home", new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "show_net" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div id="area">
+        <textarea id="area_text" name="area_text"></textarea>
+        <input type="button" value="show (js)" id="btn_show_js" />
+        <div id="show_js"></div>
+        <input type="submit" value="show (.net)" />
+        <div id="show_net"></div>
+    </div>
+}

@@ -1,0 +1,97 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+table, th, td {
+    border: 1px solid black;
+    min-width: 8em;
+}
+
+
+#main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #beddf3;
+}
+
+#asp {
+    position: absolute;
+    top: 17em;
+    left: 1em;
+    width: 34em;
+    background-color: #beddf3;
+}
+
+#js {
+    position: absolute;
+    top: 17em;
+    left: 36em;
+    width: 34em;
+    min-height: 2em;
+    background-color: #beddf3;
+}
+
+
+label {
+    display: inline-block;
+    width: 20%;
+    text-align: right;
+}
+
+thead {
+    visibility: hidden;
+}
+
+.valid_msg {
+    color: #ff004e;
+}
+
+input {
+    width: 40%;
+}
+
+#forForm {
+    position: absolute;
+    top: .5em;
+    left: .5em;
+    right: .5em;
+    border: .5px #0e324b solid;
+    background-color: #73acd4;
+    height: 16em;
+}
+
+#area {
+    position: absolute;
+    top: 17em;
+    left: 74em;
+    background-color: #beddf3;
+}
+
+    #area > textarea {
+        width: 19em;
+        min-height: 10em;
+    }
